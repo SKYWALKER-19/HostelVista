@@ -493,7 +493,44 @@ return (
                     </div>
                 </div>
             </div>
-         </div>:<h1>Still coming error </h1>}
+         </div>:<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+      <div className="bg-black/30 backdrop-blur-lg rounded-2xl border border-white/10 p-12 text-center">
+       
+        <div className="mb-6">
+          <h1 className="text-5xl font-bold text-white">
+            Hostel<span className="text-purple-500">Vista</span>
+          </h1>
+          <p className="text-gray-300 text-lg mt-2">Student Complaint Portal</p>
+        </div>
+        
+        
+        <div className="mb-8">
+          <div className="text-2xl font-semibold text-white mb-4">
+            <span className="inline-block animate-pulse">Loading</span>
+            <span className="inline-block animate-bounce ml-1">.</span>
+            <span className="inline-block animate-bounce ml-1" style={{animationDelay: '0.1s'}}>.</span>
+            <span className="inline-block animate-bounce ml-1" style={{animationDelay: '0.2s'}}>.</span>
+          </div>
+          
+         
+          <div className="flex justify-center">
+            <div className="w-12 h-12 border-4 border-purple-500/30 border-t-purple-500 rounded-full animate-spin"></div>
+          </div>
+        </div>
+        
+       
+        <div className="w-64 mx-auto">
+          <div className="bg-black/20 rounded-full h-2 overflow-hidden">
+            <div className="h-full bg-gradient-to-r from-purple-500 to-blue-500 rounded-full animate-pulse"></div>
+          </div>
+        </div>
+        
+        
+        <p className="text-gray-400 mt-6 text-sm animate-pulse">
+          Please wait while we set up your experience...
+        </p>
+      </div>
+    </div>}
     </>
 )
 
