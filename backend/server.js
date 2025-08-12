@@ -10,7 +10,7 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT;
 app.use(cors({
-  origin: 'https://axaxax.vercel.app'
+  origin: 'https://hostelvista.vercel.app/'
 }));
 app.use(express.json());
 
