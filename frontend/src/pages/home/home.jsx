@@ -79,7 +79,7 @@ React.useEffect(() => {
           </span>
         </div>
         
-        <div className="flex items-center space-x-8 absolute top-5 left-1/2 transform -translate-x-1/2">
+        <div className="hidden md:flex items-center space-x-8 absolute top-5 left-1/2 transform -translate-x-1/2">
           <a href="/home" className="text-lg text-white hover:text-purple-400 transition-colors">Home</a>
           <a href="/complaints" className="text-lg text-gray-300 hover:text-purple-400 transition-colors">Complaints</a>
           <a href="/admin" className="text-lg text-gray-300 hover:text-purple-400 transition-colors">Admin</a>
@@ -309,7 +309,7 @@ React.useEffect(() => {
           </span>
         </div>
         
-        <div className="flex items-center space-x-8 absolute top-5 left-1/2 transform -translate-x-1/2">
+        <div className="hidden md:flex items-center space-x-8 absolute top-5 left-1/2 transform -translate-x-1/2">
           <a href="/home" className="text-lg text-white hover:text-purple-400 transition-colors">Home</a>
           <a href="/complaints" className="text-lg text-gray-300 hover:text-purple-400 transition-colors">Complaints</a>
           <a href="/admin" className="text-lg text-gray-300 hover:text-purple-400 transition-colors">Admin</a>
