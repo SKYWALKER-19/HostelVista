@@ -32,13 +32,13 @@ export default function login() {
              navigate('/home'); 
          }
          else{
-         alert(response.message);
+         alert(response.data.message);
          window.location.reload();
          }
 
         } catch (error)
          {
-         alert(response.message);
+         alert(response.data.message);
          window.location.reload();
          console.log(error);
          }

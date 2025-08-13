@@ -61,12 +61,12 @@ export default function Signup() {
                    console.log('User created:', response.data);
                    navigate('/Verify',{state : { email }});
                 }else{
-                  alert(response.message);
+                  alert(response.data.message);
                   window.location.reload();
                 }
                
             } catch (error) {
-                  alert(response.message);
+                  alert(response.data.message);
                   window.location.reload();
                 console.error('Error creating user:', error);
             }
