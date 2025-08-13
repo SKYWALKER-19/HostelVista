@@ -40,7 +40,7 @@ export default function Signup() {
     return;
   }
   if (!roomNumber.trim()) {
-    alert("Please enter your room number.");
+    alert("Please enter your room number");
     return;
   }
 
@@ -61,11 +61,12 @@ export default function Signup() {
                    console.log('User created:', response.data);
                    navigate('/Verify',{state : { email }});
                 }else{
+                  alert(response.message);
                   window.location.reload();
                 }
                
             } catch (error) {
-                  alert("User already exists you can login");
+                  alert(response.message);
                   window.location.reload();
                 console.error('Error creating user:', error);
             }

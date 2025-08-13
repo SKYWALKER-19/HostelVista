@@ -32,12 +32,13 @@ export default function login() {
              navigate('/home'); 
          }
          else{
+         alert(response.message);
          window.location.reload();
          }
 
         } catch (error)
          {
-         alert("No such User exists or Wrong password");
+         alert(response.message);
          window.location.reload();
          console.log(error);
          }

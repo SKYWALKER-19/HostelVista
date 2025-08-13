@@ -26,7 +26,7 @@ const signup = async(req,res) =>{
         const user = await UserModel.findOne({email});
 
         if(user){
-            return res.status(409)
+            return res.status(200)
                .json({message:'User already exist, you can login',success:false});
 
         }
@@ -58,7 +58,7 @@ const signup = async(req,res) =>{
 
         res.status(500)
           .json({
-               message:"Internal Server error",
+               message:"Internal Server error please try again after some time",
                success: false
           })
     }
@@ -71,23 +71,23 @@ const login = async(req,res) =>{
     try{
         const { email,password  }  = req.body;
         const user = await UserModel.findOne({email});
-        const errMsg = 'Auth failed email or password is wrong';
+        const errMsg = 'User does not exist or password is wrong';
         if(!user){
-            return res.status(409)
+            return res.status(200)
                .json({message:errMsg,success:false});
 
         }
 
         const isPassEqual = await bcrypt.compare(password,user.password);
         if(!isPassEqual){
-            return res.status(409)
+            return res.status(200)
                .json({message:errMsg,success:false});
         }
 
         const jwtToken =  jwt.sign(
             {email:user.email, _id: user._id, isAdmin:user.isAdmin,name:user.name,RoomNo:user.RoomNo},
             process.env.JWT_SECRET,
-            { expiresIn : '12h'}
+            { expiresIn : '20m'}
         ) 
 
         res.status(200)
@@ -102,7 +102,7 @@ const login = async(req,res) =>{
 
         res.status(500)
           .json({
-               message:"Internal Server error",
+               message:"Internal Server error please try again after some time",
                success: false
           })
     }
