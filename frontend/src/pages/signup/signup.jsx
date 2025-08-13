@@ -220,7 +220,7 @@ export default function Signup() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full px-4 py-3 bg-black/20 border border-white/20 text-white placeholder-gray-400 focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500 rounded-lg transition-all duration-200 outline-none"
-                placeholder="Enter your offcial college email"
+                placeholder="Enter your official college email"
                 required
               />
             </div>
