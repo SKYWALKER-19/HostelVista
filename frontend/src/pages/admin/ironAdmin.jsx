@@ -276,9 +276,9 @@ React.useEffect(() => {
                              )
                            }                   
                         >
-                          <option value="Pending" >Pending</option>
-                          <option value="In Process">Recieved clothes</option>
-                          <option value="Completed">Completed</option>
+    <option value="Pending" class="bg-gray-800 text-white">Pending</option>
+    <option value="In Process" class="bg-gray-800 text-white">In Process</option>
+    <option value="Completed" class="bg-gray-800 text-white">Completed</option>
                         </select>
                       </td>
                       <td className="p-3">
